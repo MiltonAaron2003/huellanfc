@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Registro de Animal</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <div class="container">
@@ -13,47 +13,84 @@
     </header>
 
     <form id="registroForm">
-      <h2>Datos del Animal</h2>
-      <label for="nombre">Nombre del Animal</label>
-      <input type="text" id="nombre" name="nombre" required>
+      <!-- Datos del Animal -->
+      <div class="info-section">
+        <h3>Datos del Animal</h3>
 
-      <label for="edad">Edad</label>
-      <input type="number" id="edad" name="edad" required>
+        <div class="row">
+          <label for="nombre">Nombre del Animal</label>
+          <input type="text" id="nombre" name="nombre" required />
+        </div>
 
-      <label for="raza">Raza</label>
-      <input type="text" id="raza" name="raza">
+        <div class="row">
+          <label for="edad">Edad</label>
+          <input type="number" id="edad" name="edad" required />
+        </div>
 
-      <label for="medicamentos">Medicamentos</label>
-      <input type="text" id="medicamentos" name="medicamentos">
+        <div class="row">
+          <label for="raza">Raza</label>
+          <input type="text" id="raza" name="raza" />
+        </div>
 
-      <label for="seguroMedico">Seguro Médico</label>
-      <input type="text" id="seguroMedico" name="seguroMedico">
+        <div class="row">
+          <label for="medicamentos">Medicamentos</label>
+          <input type="text" id="medicamentos" name="medicamentos" />
+        </div>
 
-      <label for="domicilio">Domicilio</label>
-      <input type="text" id="domicilio" name="domicilio" required>
+        <div class="row">
+          <label for="seguroMedico">Seguro Médico de la mascota </label>
+          <input type="text" id="seguroMedico" name="seguroMedico" />
+        </div>
 
-      <h2>Contactos de Emergencia</h2>
-      <label for="contacto1_nombre">Nombre</label>
-      <input type="text" id="contacto1_nombre" name="contacto1_nombre">
+        <div class="row">
+          <label for="domicilio">Domicilio de la mascota</label>
+          <input type="text" id="domicilio" name="domicilio" required />
+        </div>
+      </div>
 
-      <label for="contacto1_parentesco">Parentesco</label>
-      <input type="text" id="contacto1_parentesco" name="contacto1_parentesco">
+      <!-- Contactos de Emergencia -->
+      <div class="info-section">
+        <h3>Contacto de Emergencia 1</h3>
 
-      <label for="contacto1_telefono">Teléfono</label>
-      <input type="tel" id="contacto1_telefono" name="contacto1_telefono">
+        <div class="row">
+          <label for="contacto1_nombre">Nombre</label>
+          <input type="text" id="contacto1_nombre" name="contacto1_nombre" />
+        </div>
 
-      <label for="contacto2_nombre">Nombre</label>
-      <input type="text" id="contacto2_nombre" name="contacto2_nombre">
+        <div class="row">
+          <label for="contacto1_parentesco">Parentesco</label>
+          <input type="text" id="contacto1_parentesco" name="contacto1_parentesco" />
+        </div>
 
-      <label for="contacto2_parentesco">Parentesco</label>
-      <input type="text" id="contacto2_parentesco" name="contacto2_parentesco">
+        <div class="row">
+          <label for="contacto1_telefono">Teléfono</label>
+          <input type="tel" id="contacto1_telefono" name="contacto1_telefono" />
+        </div>
+      </div>
 
-      <label for="contacto2_telefono">Teléfono</label>
-      <input type="tel" id="contacto2_telefono" name="contacto2_telefono">
+      <div class="info-section">
+        <h3>Contacto de Emergencia 2</h3>
+
+        <div class="row">
+          <label for="contacto2_nombre">Nombre</label>
+          <input type="text" id="contacto2_nombre" name="contacto2_nombre" />
+        </div>
+
+        <div class="row">
+          <label for="contacto2_parentesco">Parentesco</label>
+          <input type="text" id="contacto2_parentesco" name="contacto2_parentesco" />
+        </div>
+
+        <div class="row">
+          <label for="contacto2_telefono">Teléfono</label>
+          <input type="tel" id="contacto2_telefono" name="contacto2_telefono" />
+        </div>
+      </div>
 
       <div class="buttons">
         <button type="submit">Guardar Registro</button>
-        <button type="button" onclick="window.location.href='index.html'">Volver al Menú</button>
+        <button type="button" onclick="window.location.href='index.html'" class="regresar-btn">Volver al Menú</button>
+        <button type="button" onclick="window.location.href='consultar.html'" class="regresar-btn">Consultar Registros</button>
       </div>
     </form>
   </div>

@@ -1,75 +1,103 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Editar Registro</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Editar Registro</title>
+  <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
-    <div class="container">
-        <h1>Editar Registro</h1>
-        <form id="formularioEditar">
-            <div class="row">
-                <label for="nombre">Nombre:</label>
-                <input type="text" id="nombre" required>
-            </div>
-            <div class="row">
-                <label for="fecha_nacimiento">Fecha de Nacimiento:</label>
-                <input type="date" id="fecha_nacimiento" required>
-            </div>
-            <div class="row">
-                <label for="edad">Edad:</label>
-                <input type="number" id="edad" required>
-            </div>
-            <div class="row">
-                <label for="Raza">Raza:</label>
-                <input type="text" id="Raza" required>
-            </div>
-            <div class="row">
-                <label for="alergias">Alergias:</label>
-                <input type="text" id="alergias">
-            </div>
-            <div class="row">
-                <label for="medicamentos">Medicamentos:</label>
-                <input type="text" id="medicamentos">
-            </div>
-            <div class="row">
-                <label for="domicilio">Domicilio:</label>
-                <input type="text" id="domicilio" required>
-            </div>
-            <div class="row">
-                <label for="contacto1_nombre">Dueño 1 (Nombre):</label>
-                <input type="text" id="contacto1_nombre">
-            </div>
-            <div class="row">
-                <label for="contacto1_parentesco">Dueño 1 (Parentesco):</label>
-                <input type="text" id="contacto1_parentesco">
-            </div>
-            <div class="row">
-                <label for="contacto1_telefono">Dueño 1 (Teléfono):</label>
-                <input type="text" id="contacto1_telefono">
-            </div>
-            <div class="row">
-                <label for="contacto2_nombre">Dueño 2 (Nombre):</label>
-                <input type="text" id="contacto2_nombre">
-            </div>
-            <div class="row">
-                <label for="contacto2_parentesco">Dueño 2 (Parentesco):</label>
-                <input type="text" id="contacto2_parentesco">
-            </div>
-            <div class="row">
-                <label for="contacto2_telefono">Dueño 2 (Teléfono):</label>
-                <input type="text" id="contacto2_telefono">
-            </div>
+  <div class="container">
+    <h1>Editar Registro</h1>
+    <form id="formularioEditar">
+      <!-- Información general -->
+      <div class="info-section">
+        <h3>Información del Animal</h3>
+        <div class="row">
+          <label for="nombre">Nombre:</label>
+          <input type="text" id="nombre" required />
+        </div>
+        <div class="row">
+          <label for="fecha_nacimiento">Fecha de Nacimiento:</label>
+          <input type="date" id="fecha_nacimiento" required />
+        </div>
+        <div class="row">
+          <label for="edad">Edad:</label>
+          <input type="number" id="edad" required />
+        </div>
+        <div class="row">
+          <label for="Raza">Raza:</label>
+          <input type="text" id="Raza" required />
+        </div>
+      </div>
 
-            <div class="buttons">
-                <button type="submit">Guardar Edición</button>
-                <button type="button" class="regresar-btn" onclick="window.location.href='index.html'">Volver al Menú</button>
-            </div>
-        </form>
-    </div>
+      <!-- Información médica -->
+      <div class="info-section">
+        <h3>Información Médica</h3>
+        <div class="row">
+          <label for="alergias">Alergias:</label>
+          <input type="text" id="alergias" />
+        </div>
+        <div class="row">
+          <label for="medicamentos">Medicamentos:</label>
+          <input type="text" id="medicamentos" />
+        </div>
+      </div>
 
-    <script src="editar.js"></script>
+      <!-- Información de domicilio -->
+      <div class="info-section">
+        <h3>Domicilio</h3>
+        <div class="row">
+          <label for="domicilio">Domicilio:</label>
+          <input type="text" id="domicilio" required />
+        </div>
+      </div>
+
+      <!-- Contacto 1 -->
+      <div class="info-section">
+        <h3>Contacto de Dueño 1</h3>
+        <div class="row">
+          <label for="contacto1_nombre">Nombre:</label>
+          <input type="text" id="contacto1_nombre" />
+        </div>
+        <div class="row">
+          <label for="contacto1_parentesco">Parentesco:</label>
+          <input type="text" id="contacto1_parentesco" />
+        </div>
+        <div class="row">
+          <label for="contacto1_telefono">Teléfono:</label>
+          <input type="text" id="contacto1_telefono" />
+        </div>
+      </div>
+
+      <!-- Contacto 2 -->
+      <div class="info-section">
+        <h3>Contacto de Dueño 2</h3>
+        <div class="row">
+          <label for="contacto2_nombre">Nombre:</label>
+          <input type="text" id="contacto2_nombre" />
+        </div>
+        <div class="row">
+          <label for="contacto2_parentesco">Parentesco:</label>
+          <input type="text" id="contacto2_parentesco" />
+        </div>
+        <div class="row">
+          <label for="contacto2_telefono">Teléfono:</label>
+          <input type="text" id="contacto2_telefono" />
+        </div>
+      </div>
+
+      <!-- Botones -->
+      <div class="buttons">
+        <button type="submit">Guardar Edición</button>
+        <button type="button" class="regresar-btn" onclick="window.location.href='index.html'">
+          Volver al Menú
+        </button>
+        <button type="button" onclick="window.location.href='consultar.html'" class="regresar-btn">Consultar Registros</button>
+      </div>
+    </form>
+  </div>
+
+  <script src="editar.js"></script>
 </body>
 </html>
