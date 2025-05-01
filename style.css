@@ -1,0 +1,276 @@
+/* General body styling */
+* {
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif; /* Cambié la fuente a Poppins */
+}
+
+body {
+  background-color: #f4f8fb; /* Fondo suave */
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+/* Contenedor principal */
+.container {
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 20px;
+  width: 90%;
+  max-width: 800px;
+  text-align: center;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+  margin: 0 auto;
+}
+
+/* Títulos */
+h1 {
+  background-color: #9e54e0; /* Azul fresco */
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+h3 {
+  color: #9e54e0; /* Azul oscuro para los subtítulos */
+  margin-bottom: 10px;
+}
+
+/* Estilo de la sección de información */
+.info-section {
+  background-color: #d7e3f7; /* Color de fondo suave */
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  border: 1px solid #e358ce; /* Borde azul */
+}
+
+/* Filas dentro de los formularios */
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  flex-wrap: wrap;
+}
+
+.row label {
+  width: 45%;
+  font-weight: bold;
+  margin-bottom: 5px;
+  text-align: left;
+}
+
+.row input {
+  width: 50%;
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+/* Botones */
+.buttons {
+  margin-top: 20px;
+}
+ 
+button {
+  background-color: #b41eff; /* Azul brillante para botones */
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  margin: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #e69df0; /* Azul claro al pasar el mouse */
+}
+
+button:active {
+  background-color: #b41eff; /* Azul más oscuro al hacer clic */
+}
+
+button:focus {
+  outline: none;
+}
+
+/* Estilo para el botón de regreso */
+.regresar-btn {
+  background-color: #e69df0; /* Amarillo brillante para el botón de regreso */
+  color: #333; /* Texto oscuro */
+  font-size: 18px;
+  padding: 12px 30px;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.regresar-btn:hover {
+  background-color: #28e6ff; /* Amarillo más oscuro al pasar el mouse */
+  transform: translateY(-5px); /* Efecto de elevación al pasar el mouse */
+}
+
+.regresar-btn:active {
+  transform: translateY(0); /* Restablecer el efecto al hacer clic */
+}
+
+/* Sección de registro */
+.registro {
+  background-color: #e3f7e3; /* Fondo verde suave para secciones de registro */
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  border: 1px solid #2b8a3e;
+}
+
+.registro button {
+  background-color: #2b8a3e; /* Botón verde para registro */
+  color: white;
+  margin-top: 5px;
+}
+
+.registro button:hover {
+  background-color: #357a46; /* Verde más oscuro al pasar el mouse */
+}
+
+/* Header (Navigation bar) */
+.menu {
+  background: linear-gradient(90deg, #074b62, #074b62); /* Llamativo gradiente de azul */
+  padding: 20px;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+}
+
+.menu__container {
+  display: flex;
+  justify-content: center; /* Centrado de los elementos */
+  align-items: center;
+  width: 100%;
+}
+
+.menu__logo img {
+  height: 60px; /* Aumentamos el tamaño del logo */
+  width: auto;
+  transition: transform 0.3s ease;
+}
+
+.menu__logo img:hover {
+  transform: scale(1.1); /* Efecto de aumento del logo al pasar el cursor */
+}
+
+.menu__links {
+  list-style: none;
+  display: flex;
+  gap: 30px; /* Más espacio entre los elementos del menú */
+}
+
+.menu__item {
+  font-size: 1.2rem; /* Aumentamos el tamaño de los elementos del menú */
+  font-weight: 600; /* Negrita para que sea más destacado */
+}
+
+.menu__link {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.menu__link:hover {
+  color: #ffdd57; /* Color amarillo cuando el cursor pasa por encima */
+  transform: translateY(-5px); /* Sutil movimiento hacia arriba */
+}
+
+/* Mobile Navigation */
+.menu__hamburguer {
+  display: none;
+  flex-direction: column;
+  gap: 4px;
+  cursor: pointer;
+}
+
+.menu__img {
+  width: 30px;
+}
+
+@media (max-width: 768px) {
+  .menu__links {
+      display: none;
+      flex-direction: column;
+      gap: 20px;
+  }
+
+  .menu__links.active {
+      display: flex;
+  }
+
+  .menu__hamburguer {
+      display: flex;
+  }
+
+  /* Responsive Design for the container */
+  .container {
+      padding: 15px;
+  }
+
+  .row {
+      flex-direction: column;
+      align-items: flex-start;
+  }
+
+  .row label, .row input {
+      width: 100%;
+      margin-bottom: 10px;
+  }
+
+  button {
+      width: 100%; /* Los botones ocuparán el 100% del ancho */
+      padding: 12px;
+      font-size: 16px;
+  }
+
+  .regresar-btn {
+      font-size: 16px;
+      padding: 10px 25px;
+  }
+
+  /* Footer */
+  footer {
+      padding: 10px;
+  }
+}
+
+/* Footer */
+footer {
+  background-color: #074b62;
+  color: white;
+  text-align: center;
+  padding: 15px 0;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+/* Social Media Links */
+.social-links {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.social-icon {
+  font-size: 24px;
+  margin: 0 15px;
+  color: #1e90ff; /* Azul brillante */
+  transition: color 0.3s;
+}
+
+.social-icon:hover {
+  color: #63aef7; /* Azul claro cuando se pasa el cursor */
+}

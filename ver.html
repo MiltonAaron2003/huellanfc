@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ver Registro</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    #mapLink {
+      display: none;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Detalles del Registro</h1>
+    <div id="registroDetalle" class="registration-form"></div>
+
+    <h2>Ubicación en Vivo</h2>
+    <p id="ubicacionMensaje">Cargando ubicación...</p>
+    <a id="mapLink" target="_blank">Ver ubicación en el mapa</a>
+
+    <button onclick="window.location.href='consultar.html'">Volver a los registros</button>
+    <button onclick="editarRegistro()">Editar</button>
+  </div>
+
+  <script src="ver.js"></script>
+</body>
+</html>

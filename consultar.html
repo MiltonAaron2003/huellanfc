@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Consultar Registros</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Consultar Registros</h1>
+    </header>
+
+    <section id="registrosList" class="registro-lista">
+      <!-- Aquí se mostrarán los registros -->
+    </section>
+
+    <div class="buttons">
+      <button onclick="window.location.href='registro.html'">Registrar Nuevo Animal</button>
+      <button onclick="window.location.href='index.html'">Volver al Menú</button>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const registros = JSON.parse(localStorage.getItem('peludos')) || [];
+      const registrosList = document.getElementById('registrosList');
+
+      if (registros.length === 0) {
+        registrosList.innerHTML = "<p>No hay registros disponibles.</p>";
+        return;
+      }
+
+      registros.forEach((registro, index) => {
+        const div = document.createElement('div');
+        div.classList.add('registro-item');
+        div.innerHTML = `
+          <p><strong>Nombre:</strong> ${registro.nombre}</p>
+          <p><strong>Edad:</strong> ${registro.edad}</p>
+          <p><strong>Raza:</strong> ${registro.Raza || 'N/A'}</p>
+          <button onclick="verRegistro(${index})">Ver</button>
+          <button onclick="editarRegistro(${index})">Editar</button>
+          <button onclick="eliminarRegistro(${index})" style="background-color: #c62828; color: white;">Eliminar</button>
+        `;
+        registrosList.appendChild(div);
+      });
+    });
+
+    function verRegistro(index) {
+      localStorage.setItem('verIndex', index);
+      window.location.href = 'ver.html';
+    }
+
+    function editarRegistro(index) {
+      window.location.href = `registro.html?index=${index}`;
+    }
+
+    function eliminarRegistro(index) {
+      if (confirm("¿Estás seguro de que deseas eliminar este registro?")) {
+        const registros = JSON.parse(localStorage.getItem('peludos')) || [];
+        registros.splice(index, 1);
+        localStorage.setItem('peludos', JSON.stringify(registros));
+        location.reload(); // Recarga la página para reflejar los cambios
+      }
+    }
+  </script>
+</body>
+</html>
