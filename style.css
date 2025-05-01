@@ -139,13 +139,27 @@ button:focus {
 
 /* Header (Navigation bar) */
 .menu {
-  background: linear-gradient(90deg, #074b62, #074b62); /* Llamativo gradiente de azul */
+  background: linear-gradient(90deg, #6a0dad, #b41eff, #e69df0);
+  background-size: 300% 300%;
+  animation: gradientAnimation 8s ease infinite;
   padding: 20px;
   position: sticky;
   top: 0;
   width: 100%;
   z-index: 10;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 .menu__container {
@@ -273,4 +287,16 @@ footer {
 
 .social-icon:hover {
   color: #63aef7; /* Azul claro cuando se pasa el cursor */
+}
+
+.nav-link {
+  color: black !important; /* Cambia el color de los enlaces a negro */
+  font-size: 1.8rem; /* Aumenta el tamaño de las letras */
+}
+
+.testimonial-img {
+  width: 550px; /* Ajusta el ancho de las imágenes */
+  height: 400px; /* Ajusta la altura de las imágenes */
+  object-fit: cover; /* Asegura que las imágenes mantengan proporciones */
+  margin: 0 auto; /* Centra las imágenes dentro del carrusel */
 }
