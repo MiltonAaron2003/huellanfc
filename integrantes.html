@@ -77,7 +77,7 @@
             border: 1px solid #ccc;
             border-radius: 8px;
             padding: 20px;
-            width: 250px;
+            width: 370px;
             text-align: center;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -104,6 +104,43 @@
             color: white;
             padding-top: 20px;
         }
+
+         /* Estilo para acordeón interactivo */
+    .accordion-button {
+      font-size: 1.3rem;
+      background-color: #f0eaff;
+      color: #4a0080;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+ 
+    .accordion-button:hover {
+      background-color: #e0d4ff;
+    }
+ 
+    .accordion-body {
+      font-size: 1.15rem;
+      background-color: rgba(255, 255, 255, 0.95);
+      color: #333;
+      border-left: 5px solid #871eff;
+      padding: 20px;
+      line-height: 1.6;
+    }
+ 
+    .accordion-item {
+      margin-bottom: 10px;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+ 
+    .accordion-body ul {
+      padding-left: 20px;
+    }
+ 
+    .accordion-body li {
+      margin-bottom: 10px;
+    }
         
   </style>
 </head>
@@ -116,93 +153,106 @@
 
   <!-- Tarjetas individuales de los integrantes -->
   <div class="contenedor">
-        <div class="cuadro">
-          <img src="img/colin.jpg" class="card-img-top" alt="Gurrola Colin Eduardo Jesus" width="250" height="250">
-          <div class="card-body">
-            <h5 class="card-title">Gurrola Colin Eduardo Jesus</h5>
-            <p class="card-text">Rol: Programador</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="contenedor">
-        <div class="cuadro">
-          <img src="img/scar.jpeg" class="card-img-top" alt="Solis Gonzalez Maria Fernanda" width="250" height="250">
-          <div class="card-body">
-            <h5 class="card-title">Solis Gonzalez Maria Fernanda</h5>
-            <p class="card-text">Rol: Diseñadora Web</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="contenedor">
-        <div class="cuadro">
-          <img src="img/buki.jpg" class="card-img-top" alt="Ramirez Guerrero Miguel Angel" width="250" height="250">
-          <div class="card-body">
-            <h5 class="card-title">Ramirez Guerrero Miguel Angel</h5>
-            <p class="card-text">Rol: Diseñador Web</p>
-          </div>
-        </div>
+    <div class="cuadro">
+      <img src="img/colin.jpg" class="card-img-top" alt="Gurrola Colin Eduardo Jesus" width="250" height="250">
+      <div class="card-body">
+        <h5 class="card-title">Gurrola Colin Eduardo Jesus</h5>
+        <p class="card-text">Rol: Programador</p>
       </div>
     </div>
-
-    <div class="contenedor">
-      <div class="cuadro">
-          <img src="img/yo.jpeg" class="card-img-top" alt="Solis Gutierrez Milton Aaron" width="250" height="250">
-          <div class="card-body">
-            <h5 class="card-title">Solis Gutierrez Milton Aaron</h5>
-            <p class="card-text">Rol: Programador</p>
-          </div>
-        </div>
+  
+    <div class="cuadro">
+      <img src="img/scar.jpeg" class="card-img-top" alt="Solis Gonzalez Maria Fernanda" width="250" height="250">
+      <div class="card-body">
+        <h5 class="card-title">Solis Gonzalez Maria Fernanda</h5>
+        <p class="card-text">Rol: Diseñadora Web</p>
       </div>
-
-      <div class="contenedor">
-        <div class="cuadro">
-          <img src="img/migue.jpeg" class="card-img-top" alt="Chavez Mendoza Miguel Angel" width="250" height="250">
-          <div class="card-body">
-            <h5 class="card-title">Chavez Mendoza Miguel Angel</h5>
-            <p class="card-text">Rol: Programador</p>
-          </div>
-        </div>
+    </div>
+  
+    <div class="cuadro">
+      <img src="img/buki.jpg" class="card-img-top" alt="Ramirez Guerrero Miguel Angel" width="250" height="250">
+      <div class="card-body">
+        <h5 class="card-title">Ramirez Guerrero Miguel Angel</h5>
+        <p class="card-text">Rol: Diseñador Web</p>
       </div>
-
-      <div class="contenedor">
-        <div class="cuadro">
-          <img src="img/liz.jpeg" class="card-img-top" alt="Tiburcio Barajas Lizbeth Paola" width="250" height="250">
-          <div class="card-body">
-            <h5 class="card-title">Tiburcio Barajas Lizbeth Paola</h5>
-            <p class="card-text">Rol: Programadora</p>
-          </div>
-        </div>
+    </div>
+  
+    <div class="cuadro">
+      <img src="img/yo.jpeg" class="card-img-top" alt="Solis Gutierrez Milton Aaron" width="250" height="250">
+      <div class="card-body">
+        <h5 class="card-title">Solis Gutierrez Milton Aaron</h5>
+        <p class="card-text">Rol: Programador</p>
+      </div>
+    </div>
+  
+    <div class="cuadro">
+      <img src="img/migue.jpeg" class="card-img-top" alt="Chavez Mendoza Miguel Angel" width="250" height="250">
+      <div class="card-body">
+        <h5 class="card-title">Chavez Mendoza Miguel Angel</h5>
+        <p class="card-text">Rol: Programador</p>
+      </div>
+    </div>
+  
+    <div class="cuadro">
+      <img src="img/liz.jpeg" class="card-img-top" alt="Tiburcio Barajas Lizbeth Paola" width="250" height="250">
+      <div class="card-body">
+        <h5 class="card-title">Tiburcio Barajas Lizbeth Paola</h5>
+        <p class="card-text">Rol: Programadora</p>
       </div>
     </div>
   </div>
 
-  <!-- Misión -->
-  <div class="card-custom">
-    <h2 class="section-title">Misión</h2>
-    <p class="section-content">
-      Nuestra misión es desarrollar soluciones innovadoras y accesibles para nuestros usuarios, utilizando las últimas tecnologías y prácticas sostenibles, con el fin de mejorar la vida digital de cada persona y empresa a través de aplicaciones web eficientes.
-    </p>
-  </div>
-
-  <!-- Visión -->
-  <div class="card-custom">
-    <h2 class="section-title">Visión</h2>
-    <p class="section-content">
-      Nos visualizamos como un referente en el ámbito del desarrollo tecnológico, reconocido por nuestra capacidad para crear soluciones que transformen la manera en que las personas interactúan con la tecnología, siempre priorizando la innovación y la experiencia de usuario.
-    </p>
-  </div>
-
-  <!-- Objetivos -->
-  <div class="card-custom">
-    <h2 class="section-title">Objetivos</h2>
-    <ul class="section-content">
-      <li>Desarrollar aplicaciones web robustas y personalizadas para satisfacer las necesidades de nuestros usuarios.</li>
-      <li>Incorporar las mejores prácticas de seguridad, escalabilidad y accesibilidad en todos nuestros productos.</li>
-      <li>Fomentar un ambiente de trabajo colaborativo, inclusivo y siempre en busca de la mejora continua.</li>
-      <li>Impulsar el uso de tecnologías sostenibles para asegurar el impacto positivo en el entorno y la sociedad.</li>
-    </ul>
+  <!-- Sección interactiva: Misión, Visión y Objetivos -->
+  <div class="container my-5">
+    <h2 class="section-title">¿Quiénes somos?</h2>
+    <div class="accordion" id="infoAcordeon">
+      <!-- Misión -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="misionHeading">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#mision" aria-expanded="true" aria-controls="mision">
+            Misión
+          </button>
+        </h2>
+        <div id="mision" class="accordion-collapse collapse show" aria-labelledby="misionHeading" data-bs-parent="#infoAcordeon">
+          <div class="accordion-body">
+            Conectar a las personas con sus mascotas perdidas usando tecnología NFC. Creamos productos fáciles de usar que ayudan a identificar y localizar animales extraviados de forma rápida y segura.
+          </div>
+        </div>
+      </div>
+ 
+      <!-- Visión -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="visionHeading">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#vision" aria-expanded="false" aria-controls="vision">
+            Visión
+          </button>
+        </h2>
+        <div id="vision" class="accordion-collapse collapse" aria-labelledby="visionHeading" data-bs-parent="#infoAcordeon">
+          <div class="accordion-body">
+            Ser líderes en soluciones tecnológicas NFC para mascotas, haciendo que cada hogar tenga una forma innovadora y confiable de proteger a sus animales de compañía.
+          </div>
+        </div>
+      </div>
+ 
+      <!-- Objetivos -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="objetivosHeading">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#objetivos" aria-expanded="false" aria-controls="objetivos">
+            Objetivos
+          </button>
+        </h2>
+        <div id="objetivos" class="accordion-collapse collapse" aria-labelledby="objetivosHeading" data-bs-parent="#infoAcordeon">
+          <div class="accordion-body">
+            <ul>
+              <li>Desarrollar productos NFC para facilitar la localización de mascotas.</li>
+              <li>Brindar soluciones accesibles para dueños de mascotas preocupados por su seguridad.</li>
+              <li>Innovar constantemente en el uso de tecnologías inteligentes.</li>
+              <li>Promover el cuidado responsable y la identificación segura de animales.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 
   <!-- Bootstrap JS -->
