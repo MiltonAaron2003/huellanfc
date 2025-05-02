@@ -1,4 +1,4 @@
-<!doctype html>
+<!Doctype html>
 <html lang="es">
 <head>
   <meta charset="utf-8">
@@ -13,7 +13,13 @@
   <!-- Estilos personalizados -->
   <style>
     body {
-      background-color: #f8f9fa;
+      margin: 0;
+            padding: 0;
+            background-image: url("img/Fondo-I2.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            font-family: Arial, sans-serif;
     }
 
     .btn-custom {
@@ -31,7 +37,7 @@
       background-color: #6f00d5;
       transform: scale(1.05);
     }
-
+    
     .section-title {
       font-family: 'Orbitron', sans-serif;
       font-size: 40px;
@@ -58,9 +64,47 @@
       max-width: 900px;
     }
 
-    a.btn-custom {
-      text-decoration: none;
-    }
+    .contenedor {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 30px;
+        }
+
+        .cuadro {
+            background-color: rgba(255, 255, 255, 0.85); /* Fondo claro semitransparente */
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            padding: 20px;
+            width: 250px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .cuadro:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+        }
+
+        .cuadro img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .cuadro p {
+            margin: 10px 0 0;
+            color: #333;
+        }
+
+        h1 {
+            text-align: center;
+            color: white;
+            padding-top: 20px;
+        }
+        
   </style>
 </head>
 
@@ -71,10 +115,8 @@
   </div>
 
   <!-- Tarjetas individuales de los integrantes -->
-  <div class="container my-5">
-    <div class="row row-cols-1 row-cols-md-3 g-4">
-      <div class="col">
-        <div class="card h-100">
+  <div class="contenedor">
+        <div class="cuadro">
           <img src="img/colin.jpg" class="card-img-top" alt="Gurrola Colin Eduardo Jesus" width="250" height="250">
           <div class="card-body">
             <h5 class="card-title">Gurrola Colin Eduardo Jesus</h5>
@@ -82,8 +124,9 @@
           </div>
         </div>
       </div>
-      <div class="col">
-        <div class="card h-100">
+
+      <div class="contenedor">
+        <div class="cuadro">
           <img src="img/scar.jpeg" class="card-img-top" alt="Solis Gonzalez Maria Fernanda" width="250" height="250">
           <div class="card-body">
             <h5 class="card-title">Solis Gonzalez Maria Fernanda</h5>
@@ -91,9 +134,10 @@
           </div>
         </div>
       </div>
-      <div class="col">
-        <div class="card h-100">
-          <img src="img/buki.jpeg" class="card-img-top" alt="Ramirez Guerrero Miguel Angel" width="250" height="250">
+
+      <div class="contenedor">
+        <div class="cuadro">
+          <img src="img/buki.jpg" class="card-img-top" alt="Ramirez Guerrero Miguel Angel" width="250" height="250">
           <div class="card-body">
             <h5 class="card-title">Ramirez Guerrero Miguel Angel</h5>
             <p class="card-text">Rol: Diseñador Web</p>
@@ -102,9 +146,8 @@
       </div>
     </div>
 
-    <div class="row row-cols-1 row-cols-md-3 g-4 mt-4">
-      <div class="col">
-        <div class="card h-100">
+    <div class="contenedor">
+      <div class="cuadro">
           <img src="img/yo.jpeg" class="card-img-top" alt="Solis Gutierrez Milton Aaron" width="250" height="250">
           <div class="card-body">
             <h5 class="card-title">Solis Gutierrez Milton Aaron</h5>
@@ -112,8 +155,9 @@
           </div>
         </div>
       </div>
-      <div class="col">
-        <div class="card h-100">
+
+      <div class="contenedor">
+        <div class="cuadro">
           <img src="img/migue.jpeg" class="card-img-top" alt="Chavez Mendoza Miguel Angel" width="250" height="250">
           <div class="card-body">
             <h5 class="card-title">Chavez Mendoza Miguel Angel</h5>
@@ -121,8 +165,9 @@
           </div>
         </div>
       </div>
-      <div class="col">
-        <div class="card h-100">
+
+      <div class="contenedor">
+        <div class="cuadro">
           <img src="img/liz.jpeg" class="card-img-top" alt="Tiburcio Barajas Lizbeth Paola" width="250" height="250">
           <div class="card-body">
             <h5 class="card-title">Tiburcio Barajas Lizbeth Paola</h5>

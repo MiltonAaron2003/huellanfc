@@ -300,3 +300,19 @@ footer {
   object-fit: cover; /* Asegura que las imágenes mantengan proporciones */
   margin: 0 auto; /* Centra las imágenes dentro del carrusel */
 }
+
+.card h-100 {
+  background-color: rgba(255, 255, 255, 0.85); /* fondo blanco semitransparente */
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 20px;
+  width: 250px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card h-100:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+}
